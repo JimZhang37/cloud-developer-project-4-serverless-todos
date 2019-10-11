@@ -14,8 +14,9 @@ export const handler: APIGatewayProxyHandler = async (event: APIGatewayProxyEven
   const itemId = uuid.v4()
 
   const newItem = {
-    todoId: itemId,
-    ...parsedBody
+    
+    ...parsedBody,
+    todoId: itemId
   }
 
   console.log('new Item for createTodo', newItem)
