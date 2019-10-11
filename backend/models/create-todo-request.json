@@ -5,10 +5,29 @@
     "properties": {
       "userId": {
         "type": "string"
+      },
+      "createdAt": {
+          "type": "string"
+      },
+      "name": {
+        "type": "string"
+      },
+      "dueDate": {
+        "type": "string"
+      },
+      "done": {
+        "type": "boolean"
+      },
+      "attachmentUrl": {
+        "type": "string"
       }
     },
     "required": [
-      "userId"
+      "userId",
+      "createdAt",
+      "name",
+      "dueDate",
+      "done"
     ],
     "additionalProperties": false
   }

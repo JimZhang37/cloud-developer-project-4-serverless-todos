@@ -15,6 +15,8 @@ provider:
 
   environment:
     TODOS_TABLE: Todos-${self:provider.stage} 
+    INDEX_NAME: Todos-lsi
+
     AUTH_0_SECRET: '-----BEGIN CERTIFICATE-----
 MIIDBTCCAe2gAwIBAgIJBA/Md6StcerVMA0GCSqGSIb3DQEBCwUAMCAxHjAcBgNV
 BAMTFXpoYW5neWFvaHVhLmF1dGgwLmNvbTAeFw0xOTEwMTUwNTA4MDRaFw0zMzA2
@@ -112,6 +114,8 @@ resources:
             AttributeType: S
           - AttributeName: todoId
             AttributeType: S
+          - AttributeName: dueDate
+            AttributeType: S
         KeySchema:
           - AttributeName: userId
             KeyType: HASH
@@ -119,4 +123,13 @@ resources:
             KeyType: RANGE
         BillingMode: PAY_PER_REQUEST
         TableName: ${self:provider.environment.TODOS_TABLE}
+        LocalSecondaryIndexes:
+          - IndexName: ${self:provider.environment.INDEX_NAME}
+            KeySchema:
+              - AttributeName: userId
+                KeyType: HASH
+              - AttributeName: dueDate
+                KeyType: RANGE
+            Projection:
+              ProjectionType: ALL # What attributes will be copied to an index
     
