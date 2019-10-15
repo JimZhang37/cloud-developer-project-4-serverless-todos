@@ -13,6 +13,7 @@ My objective:
 2) modify getTodos to return current user's todo only.
 3) modify createTodo to create todo for current user.
 4) extend dynamoDB to include more fields. ??why we need local secondary index??
+5) add requestValidator at API Gateway, including models, API request validator and associate them with API method.
 
 Challenges:
 1) it's hard to test in serverless environment. I firstly have to run sls deploy to upload my code to cloud and then read cloudwatch log stream to find any clues. Are there any method to alliviate the effort?
