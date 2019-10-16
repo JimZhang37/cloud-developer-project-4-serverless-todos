@@ -3,9 +3,7 @@
     "title": "todo",
     "type": "object",
     "properties": {
-      "userId": {
-        "type": "string"
-      },
+
       "createdAt": {
           "type": "string"
       },
@@ -23,11 +21,10 @@
       }
     },
     "required": [
-      "userId",
-      "createdAt",
+
       "name",
-      "dueDate",
-      "done"
+      "dueDate"
+
     ],
     "additionalProperties": false
   }
