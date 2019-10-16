@@ -1,5 +1,10 @@
 # serverless_todos
 
+remaining issues:
+1) updatetodo is not working. The dynamodb document's API is not returning expected result.
+2) how to add image url? option 1, in get presigned url, I update the related field as well. option 2, once the image object is uploaded, s3's event trigers an action to add image url.
+3) a few best practise, for example, ports and adaptor, log, deployment, etc.
+
 There are two branchs, master and dev.
 
 Master branch is the most stable branch. 
@@ -9,9 +14,7 @@ In terms of function, it supports 2 API calls, getTodos and createTodo. It creat
 Dev branch tries to implement a real authorizer with RS 256 algorithm, but it still fails. Additionally, currently the dynamodb can't extend its field from 2 to more. If I change instructions about dynamodb in serverless.yml, the the sls deploy process fails, indicating inconsistency between attributes and schema.
 
 My objective:
-1) integrate with client to see if the interface is correct. Do we need to return userId in response?
-2) To understand when the getImageURL is called and how to do it.
-3) implement other functions: delete, modify Todos.
+empty now!
 
 
 
@@ -22,6 +25,9 @@ Finished Tasks:
 3) modify createTodo to create todo for current user.
 4) extend dynamoDB to include more fields. ??why we need local secondary index??
 5) add requestValidator at API Gateway, including models, API request validator and associate them with API method.
+6) integrate with client to see if the interface is correct. Do we need to return userId in response?
+7 To understand when the getImageURL is called and how to do it.
+8) implement other functions: delete, modify Todos.
 
 Challenges:
 1) it's hard to test in serverless environment. I firstly have to run sls deploy to upload my code to cloud and then read cloudwatch log stream to find any clues. Are there any method to alliviate the effort?
