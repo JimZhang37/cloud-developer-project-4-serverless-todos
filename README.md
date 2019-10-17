@@ -10,6 +10,7 @@ Related topics:
 1) Nodejs, promise, aws sdk for nodejs, dynamodb, s3 
 2) image related library, like jimp, to manipulate images
 3) Frontend framework, ionix, Reactive,
+4) more command from sls
 
 
 There are two branchs, master and dev.
