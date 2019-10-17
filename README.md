@@ -5,6 +5,12 @@ remaining issues:
 2) how to add image url? option 1, in get presigned url, I update the related field as well. option 2, once the image object is uploaded, s3's event trigers an action to add image url.
 3) a few best practise, for example, ports and adaptor, log, deployment, etc.
 
+Related topics:
+1) Nodejs, promise, aws sdk for nodejs, dynamodb, s3 
+2) image related library, like jimp, to manipulate images
+3) Frontend framework, ionix, Reactive,
+
+
 There are two branchs, master and dev.
 
 Master branch is the most stable branch. 
