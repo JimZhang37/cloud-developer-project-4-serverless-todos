@@ -21,21 +21,24 @@ export const handler: APIGatewayProxyHandler = async (event: APIGatewayProxyEven
   const jwtToken = split[1]
   const uId = parseUserId(jwtToken)
 
-  const item = {
-    userId: uId,
-    todoId: todoId
-  }
 
-  const result = await docClient.update({
+
+  const param = {
     TableName: todosTable,
-    Key: item,
+    Key: {
+      userId: uId,
+      todoId: todoId
+    },
     UpdateExpression: "set dueDate = :dueDate, done = :done",
-    ExpressionAttributeValues: {
 
+    ExpressionAttributeValues: {
         ":dueDate": parsedBody.dueDate,
-        ":done": parsedBody.done
+        ":done": parsedBody.done,
+
     }
-  }).promise()
+  }
+  const result = await docClient.update( param
+  ).promise()
 
   console.log('the result of update is ', result)
   return {
