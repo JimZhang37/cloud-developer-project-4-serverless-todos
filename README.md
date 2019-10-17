@@ -4,6 +4,7 @@ remaining issues:
 1) updatetodo is not working. The dynamodb document's API is not returning expected result.
 2) how to add image url? option 1, in get presigned url, I update the related field as well. option 2, once the image object is uploaded, s3's event trigers an action to add image url.
 3) a few best practise, for example, ports and adaptor, log, deployment, etc.
+4) in client, create a todo, delete it and then create again with the same name, then a error occurs. The CreateTodo API received a request with name = ''
 
 Related topics:
 1) Nodejs, promise, aws sdk for nodejs, dynamodb, s3 
