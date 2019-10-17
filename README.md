@@ -1,10 +1,10 @@
 # serverless_todos
 
 remaining issues:
-1) updatetodo is not working. The dynamodb document's API is not returning expected result.
-2) how to add image url? option 1, in get presigned url, I update the related field as well. option 2, once the image object is uploaded, s3's event trigers an action to add image url.
-3) a few best practise, for example, ports and adaptor, log, deployment, etc.
-4) in client, create a todo, delete it and then create again with the same name, then a error occurs. The CreateTodo API received a request with name = ''
+
+1) how to add image url? option 1, in get presigned url, I update the related field as well. option 2, once the image object is uploaded, s3's event trigers an action to add image url.
+2) a few best practise, for example, ports and adaptor, log, deployment, etc.
+3) in client, create a todo, delete it and then create again with the same name, then a error occurs. The CreateTodo API received a request with name = ''. I think this is client's problem. If user don't key in the todo name again, it just put name = '' in the request. But why dynamodb fails to this value?
 
 Related topics:
 1) Nodejs, promise, aws sdk for nodejs, dynamodb, s3 
@@ -35,6 +35,7 @@ Finished Tasks:
 6) integrate with client to see if the interface is correct. Do we need to return userId in response?
 7 To understand when the getImageURL is called and how to do it.
 8) implement other functions: delete, modify Todos.
+9) updatetodo is not working. The dynamodb document's API is not returning expected result.
 
 Challenges:
 1) it's hard to test in serverless environment. I firstly have to run sls deploy to upload my code to cloud and then read cloudwatch log stream to find any clues. Are there any method to alliviate the effort?
