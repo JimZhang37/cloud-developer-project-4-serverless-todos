@@ -42,6 +42,10 @@ cd backend
 npm install
 sls deploy -v
 ```
+To remove an application, run the following commands:
+```
+sls remove
+```
 
 ## Frontend
 ### How to setup Auth0
