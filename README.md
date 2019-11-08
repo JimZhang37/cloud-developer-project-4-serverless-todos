@@ -77,12 +77,12 @@ This should start a development server with the React application that will inte
 
 ## Finished Tasks
 >1) correct custom authorizer//public key moved from serverless.yml to auth*.ts
->>2) modify getTodos to return current user's todo only.
->>>3) modify createTodo to create todo for current user.
-4) extend dynamoDB to include more fields. ??why we need local secondary index??
-5) add requestValidator at API Gateway, including models, API request validator and associate them with API method.
-6) integrate with client to see if the interface is correct. Do we need to return userId in response?
-7 To understand when the getImageURL is called and how to do it.
-8) implement other functions: delete, modify Todos.
-9) updatetodo is not working. The dynamodb document's API is not returning expected result.
+>2) modify getTodos to return current user's todo only.
+>3) modify createTodo to create todo for current user.
+>4) extend dynamoDB to include more fields. ??why we need local secondary index??
+>5) add requestValidator at API Gateway, including models, API request validator and associate them with API method.
+>6) integrate with client to see if the interface is correct. Do we need to return userId in response?
+>7 To understand when the getImageURL is called and how to do it.
+>8) implement other functions: delete, modify Todos.
+>9) updatetodo is not working. The dynamodb document's API is not returning expected result.
 
