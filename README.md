@@ -45,10 +45,12 @@ sls deploy -v
 
 ## Frontend
 ### How to setup Auth0
+Auth0 can provide a private key for our backend, which will be used by `src/lambda/auth/auth0Authorizer.ts`.
 
+In client, auth0 url, client ID and callback url must be specified in `client/src/config.ts`.
 ### How to setup client
 
-To run a client application first edit the `client/src/config.ts` file to set correct parameters. And then run the following commands:
+To run a client application first edit the `client/src/config.ts` file to set correct parameters. In addition to auth0 related parameters, API ID, which can be seen after backend is deployed, should be specified in this file too. And then run the following commands:
 
 ```
 cd client
