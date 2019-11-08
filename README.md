@@ -19,6 +19,15 @@ In terms of function, it supports 2 API calls, getTodos and createTodo. It creat
 
 
 Dev branch tries to implement a real authorizer with RS 256 algorithm, but it still fails. Additionally, currently the dynamodb can't extend its field from 2 to more. If I change instructions about dynamodb in serverless.yml, the the sls deploy process fails, indicating inconsistency between attributes and schema..
+## Related topics
+* Backend <br> 
+Nodejs, promise, aws sdk for nodejs, dynamodb, s3 
+* Image related library <br> 
+like jimp, to manipulate images
+* Frontend framework <br> 
+React
+* Automation <br> 
+sls
 
 # How to run the application
 
@@ -59,11 +68,6 @@ This should start a development server with the React application that will inte
 * a few best practise, for example, ports and adaptor, log, deployment, etc.
 * in client, create a todo, delete it and then create again with the same name, then a error occurs. The CreateTodo API received a request with name = ''. I think this is client's problem. If user don't key in the todo name again, it just put name = '' in the request. But why dynamodb fails to this value?
 
-Related topics:
-* Nodejs, promise, aws sdk for nodejs, dynamodb, s3 
-* image related library, like jimp, to manipulate images
-* Frontend framework, ionix, Reactive,
-* more command from sls
 
 
 
