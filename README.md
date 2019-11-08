@@ -2,7 +2,7 @@
 
 # Introduction
 
-## Folders
+## Folders and files
 * backend <br>
 
 * client <br>
@@ -11,6 +11,8 @@ A simple react app
 
 * screenshots <br>
 screenshots taken from AWS console and terminal after the serverless successfully built a stack.
+* README_original.md <br>
+task description for this project
 ## Branches
 There are two branchs, master and dev.
 
