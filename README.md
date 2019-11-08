@@ -1,4 +1,4 @@
-# serverless_todos
+# Serverless_todos
 
 ## Introduction
 There are two branchs, master and dev.
@@ -9,6 +9,32 @@ In terms of function, it supports 2 API calls, getTodos and createTodo. It creat
 
 Dev branch tries to implement a real authorizer with RS 256 algorithm, but it still fails. Additionally, currently the dynamodb can't extend its field from 2 to more. If I change instructions about dynamodb in serverless.yml, the the sls deploy process fails, indicating inconsistency between attributes and schema..
 
+# How to run the application
+
+## Backend
+
+To deploy an application run the following commands:
+
+```
+cd backend
+npm install
+sls deploy -v
+```
+
+## Frontend
+### How to setup Auth0
+
+### How to setup client
+
+To run a client application first edit the `client/src/config.ts` file to set correct parameters. And then run the following commands:
+
+```
+cd client
+npm install
+npm run start
+```
+
+This should start a development server with the React application that will interact with the serverless TODO application.
 ## Challenges
 * It's hard to test in serverless environment. I firstly have to run sls deploy to upload my code to cloud and then read cloudwatch log stream to find any clues. Are there any method to alliviate the effort?
 * If I skip some videos from the course, it will become hard. For example, the configuration of auth0 is described in the exerse instruction, but I started to run my client before I read it. 
