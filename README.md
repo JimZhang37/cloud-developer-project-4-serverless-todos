@@ -1,6 +1,17 @@
 # Serverless_todos
 
-## Introduction
+# Introduction
+
+## Folders
+* backend <br>
+
+* client <br>
+A simple react app
+* images <br>
+
+* screenshots <br>
+screenshots taken from AWS console and terminal after the serverless successfully built a stack.
+## Branches
 There are two branchs, master and dev.
 
 Master branch is the most stable branch. 
