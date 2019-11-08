@@ -4,7 +4,7 @@
 
 ## Folders and files
 * backend <br>
-
+A serverless framework application
 * client <br>
 A simple react app
 * images <br>
@@ -14,13 +14,7 @@ screenshots taken from AWS console and terminal after the serverless successfull
 * README_original.md <br>
 task description for this project
 ## Branches
-There are two branchs, master and dev.
-
-Master branch is the most stable branch. 
-In terms of function, it supports 2 API calls, getTodos and createTodo. It creates a simplifed DynamoDB table with two fields, userId and todoId. It also supports a fake authorization. A custom authorizer is attached to getTodos. When a token of 123 is included in request, the authorizer will grant rights to the caller.
-
-
-Dev branch tries to implement a real authorizer with RS 256 algorithm, but it still fails. Additionally, currently the dynamodb can't extend its field from 2 to more. If I change instructions about dynamodb in serverless.yml, the the sls deploy process fails, indicating inconsistency between attributes and schema..
+There are two branchs, master and dev. A pull request has mergered these two branches, so master branch is up to date.
 ## Related topics
 * Backend <br> 
 Nodejs, promise, aws sdk for nodejs, dynamodb, s3 
@@ -82,9 +76,9 @@ This should start a development server with the React application that will inte
 
 
 ## Finished Tasks
-1) correct custom authorizer//public key moved from serverless.yml to auth*.ts
-2) modify getTodos to return current user's todo only.
-3) modify createTodo to create todo for current user.
+>1) correct custom authorizer//public key moved from serverless.yml to auth*.ts
+>>2) modify getTodos to return current user's todo only.
+>>>3) modify createTodo to create todo for current user.
 4) extend dynamoDB to include more fields. ??why we need local secondary index??
 5) add requestValidator at API Gateway, including models, API request validator and associate them with API method.
 6) integrate with client to see if the interface is correct. Do we need to return userId in response?
